@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card'
 import CardSection from './CardSection'
+import Button from './Button'
 
 const PresDetail = ({person}) =>  {
-    const {number, president, image} = person
+    const {number, president, image, birth_year, wiki} = person
     const {imageStyle, headerContentStyle, imageContainerStyle, headerTextStyle, bigImageStyle} = styles
 
     return (
@@ -20,6 +21,9 @@ const PresDetail = ({person}) =>  {
             </CardSection>
             <CardSection>
                 <Image style={bigImageStyle} source={{uri: image}}/>
+            </CardSection>
+            <CardSection>
+                <Button onPress={() => Linking.openURL(wiki)} />
             </CardSection>
         </Card>
     )

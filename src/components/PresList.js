@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios'
 import PresDetail from './PresDetail'
 
@@ -10,7 +10,7 @@ state = { people: [] }
 
   componentWillMount() {
 
-    axios.get('https://api.myjson.com/bins/1aks9y')
+    axios.get('https://api.myjson.com/bins/k4y2m')
         .then(response => this.setState( { people: response.data} ))
   }
 
@@ -23,9 +23,9 @@ renderPeople() {
     console.log("state", this.state)
 
     return (
-      <View style={styles.viewStyle}>
+      <ScrollView style={styles.viewStyle}>
         {this.renderPeople()}
-      </View>
+      </ScrollView>
     );
   }
 }
