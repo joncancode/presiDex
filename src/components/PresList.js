@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios'
+import PresDetail from './PresDetail'
 
 //const customData = require('../../db.json');
 
 class PresList extends Component {
+state = { people: [] }
+
   componentWillMount() {
 
-    axios.get('https://api.myjson.com/bins/f4vti')
-        .then(response => console.log(response))
-
+    axios.get('https://api.myjson.com/bins/1aks9y')
+        .then(response => this.setState( { people: response.data} ))
   }
 
+renderPeople() {
+    return this.state.people.map(person => <PresDetail key={person.number} person={person}/>)
+}
+
   render() {
+
+    console.log("state", this.state)
+
     return (
       <View style={styles.viewStyle}>
-        <Text>Presidents</Text>
+        {this.renderPeople()}
       </View>
     );
   }
 }
 const styles = {
   viewStyle: {
-    backgroundColor: 'lightgreen'
+    backgroundColor: 'white'
     //   alignItems: 'center',
     //   justifyContent: 'center',
     //   height: 60,
