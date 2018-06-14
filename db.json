@@ -1,3 +1,4 @@
+// to do: need to add images for each
 [
   {"number":1,"president":"George Washington","birth_year":1732,"death_year":1799,"took_office":"1789-04-30","left_office":"1797-03-04","party":"No Party", "image": "https://c1.staticflickr.com/9/8340/8283537804_75aa95b542.jpg", "wiki": "https://en.wikipedia.org/wiki/George_Washington"},
   {"number":2,"president":"John Adams","birth_year":1735,"death_year":1826,"took_office":"1797-03-04","left_office":"1801-03-04","party":"Federalist", "image": "https://78.media.tumblr.com/dda9b21708efe05c38456179c8ed32d0/tumblr_p8miduYrHf1xto0sxo1_500.jpg", "wiki": "https://en.wikipedia.org/wiki/John_Adams"},
